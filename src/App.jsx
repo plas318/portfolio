@@ -93,6 +93,20 @@ const projects = [
     links: [{ label: "Repository", href: "https://github.com/plas318/TrackerModel-with-Flask" }],
   },
   {
+    name: "ChatAgent App",
+    type: "Mobile App / Kotlin",
+    summary:
+      "Simple Chat app based on kotlin using OpenAI(API) and gpt models",
+    impact: [
+      "Full function mobile app",
+      "Chat with GPT models using api calls", 
+      "Customize model using user-specific data / prompts", 
+      "Created with MVVM Architecture, LiveData model, Room database, Retrofit to make api calls",
+    ],
+    tech: ["Kotlin", "MVVM", "LiveData", "Jetpack Compose", "Room DB", "Retrofit", "OpenAI"],
+    links: [{ label: "Repository", href: "https://github.com/plas318/ChatAgent" }],
+  },
+  {
     name: "Twitter-Simple-History",
     type: "JavaScript Utility / Extension",
     summary:

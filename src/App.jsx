@@ -12,10 +12,6 @@ import {
   Award,
   CheckCircle2,
   ArrowUpRight,
-  MapPin,
-  Sparkles,
-  Layers3,
-  TerminalSquare,
 } from "lucide-react";
 
 const profile = {
@@ -142,7 +138,6 @@ function SectionTitle({ eyebrow, title, description }) {
   return (
     <div className="mx-auto mb-10 max-w-3xl text-center">
       <p className="mb-3 text-md font-semibold uppercase tracking-[0.25em] text-purple-300">{eyebrow}</p>
-      {/* <h2 className="text-3xl font-bold text-white md:text-4xl">{title}</h2> */}
       {description && <p className="mt-4 text-base leading-7 text-slate-400">{description}</p>}
     </div>
   );
@@ -162,7 +157,7 @@ export default function Portfolio() {
 
       <header className="sticky top-0 z-20 border-b border-slate-800 bg-slate-950/85 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <a href="#top" className="text-lg font-bold tracking-tight text-white">JH</a>
+          <a href="#top" className="text-lg font-bold tracking-tight text-white">Plas318</a>
           <div className="hidden items-center gap-6 text-sm text-slate-200 md:flex">
             <a href="#projects" className="hover:text-white">Projects</a>
             <a href="#skills" className="hover:text-white">Skills</a>
@@ -190,7 +185,6 @@ export default function Portfolio() {
               프로젝트 보기
             </a>
             <a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-purple-300">
-              {/* <Github size={18} /> GitHub */}
             </a>
           </div>
         </motion.div>
@@ -263,7 +257,6 @@ export default function Portfolio() {
         <SectionTitle
           eyebrow="Technical Stack"
           title="백엔드 중심 풀스택 역량"
-          description="현재 강점은 Python 웹 백엔드, React 연동, 컨테이너 기반 배포입니다. Spring Boot 학습 포트폴리오를 추가하면 국내 신입 백엔드 지원 폭을 크게 넓힐 수 있습니다."
         />
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {skills.map(({ title, icon: Icon, items }) => (
@@ -318,14 +311,7 @@ export default function Portfolio() {
       <section id="contact" className="relative mx-auto max-w-6xl px-5 py-24">
         <Card className="text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-purple-300">Contact</p>
-          <h2 className="text-3xl font-bold text-white md:text-4xl">함께 성장할 수 있는 웹 개발 포지션을 찾고 있습니다.</h2>
-          <p className="mx-auto mt-4 max-w-2xl leading-7 text-slate-300">
-            Python/Django 기반 백엔드 경험을 바탕으로, Spring Boot와 클라우드 배포 역량까지 확장해 안정적인 웹 서비스를 만드는 개발자를 지향합니다.
-          </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-purple-300">
-              {/* <Github size={18} /> GitHub 보기 */}
-            </a>
             <a href={`mailto:${profile.email}`} className="inline-flex items-center gap-2 rounded-full bg-purple-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-purple-300">
               <Mail size={18} /> 이메일 보내기
             </a>

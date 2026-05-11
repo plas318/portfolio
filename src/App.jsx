@@ -19,13 +19,13 @@ import {
 } from "lucide-react";
 
 const profile = {
-  name: "Adams Kim",
+  name: "J H",
   role: "Backend-Oriented Full-Stack Web Developer",
   tagline:
     "Django/DRF와 React 기반의 웹 서비스를 직접 설계·구현하고 Docker, Nginx, Cloud 환경에서 배포까지 경험한 개발자입니다.",
   location: "South Korea",
   github: "https://github.com/plas318",
-  email: "your.email@example.com",
+  email: "plas3180g@gmail.com",
 };
 
 const skills = [
@@ -53,7 +53,7 @@ const skills = [
 
 const projects = [
   {
-    name: "oMoonlit — Full-Stack Blog Platform",
+    name: "Full-Stack Blog Platform",
     type: "Main Project",
     summary:
       "Django REST Framework 기반 백엔드와 React 프론트엔드를 분리 구성하고, Docker/Nginx/Cloud 환경에서 배포까지 진행한 개인 블로그 서비스입니다.",
@@ -67,6 +67,21 @@ const projects = [
     links: [
       { label: "Backend", href: "https://github.com/plas318/mlbackend" },
       { label: "Frontend", href: "https://github.com/plas318/mlfrontend" },
+    ],
+  },
+  {
+    name: "Purgo CRM Backend Project",
+    type: "Main Project / Django / DRF",
+    summary:
+      "Django REST Framework 기반 백엔드를 활용하여 Purgo 기업을 위한 CRM 및 각종 지표 및 자료를 제공하는 웹 개발 프로젝트입니다",
+    impact: [
+      "백엔드 API 서버와 프론트엔드 클라이언트를 분리한 풀스택 구조 설계",
+      "Custom API 설계를 통해 다양한 그래프 및 지표를 제공",
+      "JWT Token Authentication을 통한 REST 구현",
+    ],
+    tech: ["Django", "DRF", "Backend", "Docker", "OpenAPI"],
+    links: [
+      { label: "Purgo-Backend", href: "https://github.com/plas318/PurgoCRM-Backend" },
     ],
   },
   {
@@ -110,7 +125,7 @@ const education = [
   },
 ];
 
-const certifications = ["정보처리기사", "SQLD", "OPIc AL", "Near-native English Communication"];
+const certifications = ["정보처리기사", "SQLD", "OPIc AL", "TOEIC 970", "Near-native English Communication"];
 
 const strengths = [
   "영어 기반 협업·문서 독해·해외 자료 학습에 강점",
@@ -126,9 +141,9 @@ function Badge({ children }) {
 function SectionTitle({ eyebrow, title, description }) {
   return (
     <div className="mx-auto mb-10 max-w-3xl text-center">
-      <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">{eyebrow}</p>
-      <h2 className="text-3xl font-bold text-white md:text-4xl">{title}</h2>
-      {description && <p className="mt-4 text-base leading-7 text-slate-300">{description}</p>}
+      <p className="mb-3 text-md font-semibold uppercase tracking-[0.25em] text-purple-300">{eyebrow}</p>
+      {/* <h2 className="text-3xl font-bold text-white md:text-4xl">{title}</h2> */}
+      {description && <p className="mt-4 text-base leading-7 text-slate-400">{description}</p>}
     </div>
   );
 }
@@ -139,16 +154,16 @@ function Card({ children, className = "" }) {
 
 export default function Portfolio() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100">
+    <main className="min-h-screen bg-white-950 text-black-100">
       <div className="absolute inset-0 -z-0 overflow-hidden">
-        <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-cyan-500/20 blur-3xl" />
-        <div className="absolute right-0 top-80 h-[360px] w-[360px] rounded-full bg-indigo-500/20 blur-3xl" />
+        <div className="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/8 rounded-full bg-slate-500/20 blur-3xl" />
+        <div className="absolute right-0 top-80 h-[360px] w-[360px] rounded-full bg-purple-500/20 blur-3xl" />
       </div>
 
-      <header className="sticky top-0 z-20 border-b border-slate-800 bg-slate-950/80 backdrop-blur">
+      <header className="sticky top-0 z-20 border-b border-slate-800 bg-slate-950/85 backdrop-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
-          <a href="#top" className="text-lg font-bold tracking-tight text-white">Adams Kim</a>
-          <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+          <a href="#top" className="text-lg font-bold tracking-tight text-white">JH</a>
+          <div className="hidden items-center gap-6 text-sm text-slate-200 md:flex">
             <a href="#projects" className="hover:text-white">Projects</a>
             <a href="#skills" className="hover:text-white">Skills</a>
             <a href="#education" className="hover:text-white">Education</a>
@@ -157,7 +172,7 @@ export default function Portfolio() {
         </nav>
       </header>
 
-      <section id="top" className="relative mx-auto grid max-w-6xl gap-10 px-5 py-24 md:grid-cols-[1.2fr_0.8fr] md:items-center">
+      <section id="top" className="relative mx-auto grid max-w-6xl gap-5 px-5 py-24 md:grid-cols-[1.2fr_0.8fr] md:items-center">
         <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55 }}>
           <div className="mb-6 flex flex-wrap gap-3">
             <Badge>Backend</Badge>
@@ -166,15 +181,15 @@ export default function Portfolio() {
             <Badge>React</Badge>
             <Badge>English AL</Badge>
           </div>
-          <h1 className="max-w-4xl text-4xl font-black leading-tight text-white md:text-6xl">
-            서비스를 끝까지 만들어 본<br />웹 개발자, {profile.name}
+          <h1 className="max-w-4xl text-4xl mt-5 mb-10 font-black leading-tight text-slate-600 md:text-5xl">
+            웹 개발자, {profile.name}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">{profile.tagline}</p>
+          <p className="max-w-2xl text-lg leading-8 text-slate-600">{profile.tagline}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <a href="#projects" className="rounded-full bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300">
+            <a href="#projects" className="rounded-full bg-purple-300 px-6 py-3 transition hover:bg-purple-200">
               프로젝트 보기
             </a>
-            <a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-cyan-300">
+            <a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-purple-300">
               {/* <Github size={18} /> GitHub */}
             </a>
           </div>
@@ -182,13 +197,13 @@ export default function Portfolio() {
 
         <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.55, delay: 0.15 }}>
           <Card className="relative overflow-hidden">
-            <div className="absolute right-0 top-0 h-32 w-32 rounded-bl-full bg-cyan-400/10" />
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Profile Snapshot</p>
+            <div className="absolute right-0 top-0 h-32 w-32 rounded-bl-full bg-purple-400/10" />
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-purple-300">Profile Snapshot</p>
             <div className="mt-6 space-y-5">
               {strengths.map((item) => (
                 <div key={item} className="flex gap-3">
-                  <CheckCircle2 className="mt-1 shrink-0 text-cyan-300" size={18} />
-                  <p className="text-slate-300">{item}</p>
+                  <CheckCircle2 className="mt-1 shrink-0 text-purple-300" size={18} />
+                  <p className="text-white/85">{item}</p>
                 </div>
               ))}
             </div>
@@ -213,7 +228,7 @@ export default function Portfolio() {
             >
               <Card className="grid gap-6 md:grid-cols-[0.9fr_1.1fr]">
                 <div>
-                  <p className="mb-3 text-sm font-semibold text-cyan-300">{project.type}</p>
+                  <p className="mb-3 text-sm font-semibold text-purple-300">{project.type}</p>
                   <h3 className="text-2xl font-bold text-white">{project.name}</h3>
                   <p className="mt-4 leading-7 text-slate-300">{project.summary}</p>
                   <div className="mt-6 flex flex-wrap gap-2">
@@ -221,7 +236,7 @@ export default function Portfolio() {
                   </div>
                   <div className="mt-6 flex flex-wrap gap-3">
                     {project.links.map((link) => (
-                      <a key={link.href} href={link.href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 hover:text-cyan-200">
+                      <a key={link.href} href={link.href} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-purple-300 hover:text-purple-200">
                         {link.label} <ArrowUpRight size={16} />
                       </a>
                     ))}
@@ -232,7 +247,7 @@ export default function Portfolio() {
                   <ul className="space-y-3">
                     {project.impact.map((item) => (
                       <li key={item} className="flex gap-3 text-slate-300">
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-300" />
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-purple-300" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -253,7 +268,7 @@ export default function Portfolio() {
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {skills.map(({ title, icon: Icon, items }) => (
             <Card key={title}>
-              <Icon className="mb-4 text-cyan-300" size={28} />
+              <Icon className="mb-4 text-purple-300" size={28} />
               <h3 className="mb-4 text-xl font-bold text-white">{title}</h3>
               <div className="flex flex-wrap gap-2">
                 {items.map((item) => <Badge key={item}>{item}</Badge>)}
@@ -266,17 +281,17 @@ export default function Portfolio() {
       <section className="relative mx-auto max-w-6xl px-5 py-20">
         <div className="grid gap-6 md:grid-cols-3">
           <Card>
-            <Globe2 className="mb-4 text-cyan-300" />
+            <Globe2 className="mb-4 text-purple-300" />
             <h3 className="text-xl font-bold text-white">Deployment Experience</h3>
             <p className="mt-3 leading-7 text-slate-300">도메인 구매, DNS 연결, 클라우드 서버, Docker, Nginx까지 실제 운영 흐름을 경험했습니다.</p>
           </Card>
           <Card>
-            <Languages className="mb-4 text-cyan-300" />
+            <Languages className="mb-4 text-purple-300" />
             <h3 className="text-xl font-bold text-white">English Communication</h3>
             <p className="mt-3 leading-7 text-slate-300">OPIc AL 및 원어민 수준 영어 구사 능력을 바탕으로 글로벌 협업과 영문 기술 문서 이해에 강점이 있습니다.</p>
           </Card>
           <Card>
-            <Award className="mb-4 text-cyan-300" />
+            <Award className="mb-4 text-purple-300" />
             <h3 className="text-xl font-bold text-white">Certifications</h3>
             <div className="mt-4 flex flex-wrap gap-2">
               {certifications.map((cert) => <Badge key={cert}>{cert}</Badge>)}
@@ -290,9 +305,9 @@ export default function Portfolio() {
         <div className="grid gap-5 md:grid-cols-2">
           {education.map((edu) => (
             <Card key={edu.school}>
-              <GraduationCap className="mb-4 text-cyan-300" size={28} />
+              <GraduationCap className="mb-4 text-purple-300" size={28} />
               <h3 className="text-xl font-bold text-white">{edu.school}</h3>
-              <p className="mt-2 text-cyan-200">{edu.degree}</p>
+              <p className="mt-2 text-purple-200">{edu.degree}</p>
               <p className="mt-3 text-slate-300">{edu.detail}</p>
               <p className="mt-2 text-sm text-slate-500">{edu.year}</p>
             </Card>
@@ -302,16 +317,16 @@ export default function Portfolio() {
 
       <section id="contact" className="relative mx-auto max-w-6xl px-5 py-24">
         <Card className="text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-cyan-300">Contact</p>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-purple-300">Contact</p>
           <h2 className="text-3xl font-bold text-white md:text-4xl">함께 성장할 수 있는 웹 개발 포지션을 찾고 있습니다.</h2>
           <p className="mx-auto mt-4 max-w-2xl leading-7 text-slate-300">
             Python/Django 기반 백엔드 경험을 바탕으로, Spring Boot와 클라우드 배포 역량까지 확장해 안정적인 웹 서비스를 만드는 개발자를 지향합니다.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-cyan-300">
+            <a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full border border-slate-700 px-6 py-3 font-semibold text-white transition hover:border-purple-300">
               {/* <Github size={18} /> GitHub 보기 */}
             </a>
-            <a href={`mailto:${profile.email}`} className="inline-flex items-center gap-2 rounded-full bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300">
+            <a href={`mailto:${profile.email}`} className="inline-flex items-center gap-2 rounded-full bg-purple-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-purple-300">
               <Mail size={18} /> 이메일 보내기
             </a>
           </div>
